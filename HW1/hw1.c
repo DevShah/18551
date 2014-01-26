@@ -5,9 +5,9 @@ int main(){
     int filter_len = 444; //Length of filter generated in MATLAB
     int signal_len = 220500; //Length of signal given to us
     int fs = 44100; //Sampling frequency
-    float* noisy = calloc(signal_len, sizeof(float));
-    float* filter = calloc(filter_len, sizeof(float));
-    float* conv;
+    double* noisy = calloc(signal_len, sizeof(double));
+    double* filter = calloc(filter_len, sizeof(double));
+    double* conv;
     read_from_file("noisy.dat", noisy, 0);
     read_from_file("filter.dat", filter, 0);
 
@@ -26,10 +26,10 @@ int main(){
 
 /******************Part 1: Noise Filtering*******************/
 
-float* filter_signal(float* signal, float* filter, int signal_size, int filter_size){
+double* filter_signal(double* signal, double* filter, int signal_size, int filter_size){
     //TODO: Convolve signal with filter
 
-    float * conv = calloc(signal_size + filter_size - 1, sizeof(float));
+    double * conv = calloc(signal_size + filter_size - 1, sizeof(double));
 
 	
     for(int i = 0; i < filter_size + signal_size - 1; i++)
@@ -50,22 +50,22 @@ float* filter_signal(float* signal, float* filter, int signal_size, int filter_s
 /***********************Part 2: Modulation*******************/
 
 //multiply a signal in the time domain by a sign wave of frequency omega
-void modulate(float* signal, int signal_len, float fs, float omega){
-    float tau = 6.283185; //2*pi
+void modulate(double* signal, int signal_len, double fs, double omega){
+    double tau = 6.283185; //2*pi
     for(int i = 0; i < signal_len; i++){
         //sinf takes in a value in radians
         //2*pi*omega = tau*omega
         //t = i/fs
-        float angle = tau*(float)(omega*i/fs); 
+        double angle = tau*(double)(omega*i/fs); 
         signal[i] = signal[i]*sinf(angle); 
     }
 }
 
 /***********************FILE IO******************************/
-int read_from_file(const char* name, float* buffer, int start){
+int read_from_file(const char* name, double* buffer, int start){
     int buf_size = 0;
     FILE* file;
-    float d;
+    double d;
 
     file = fopen(name, "rb");
     if (file == NULL){
@@ -74,7 +74,7 @@ int read_from_file(const char* name, float* buffer, int start){
    
     int i = 0;
     while(!feof(file)){
-        fread(&d, sizeof(float), 1, file);
+        fread(&d, sizeof(double), 1, file);
         if (i < start) i++;
         else{
             buffer[buf_size] = d;
@@ -86,7 +86,7 @@ int read_from_file(const char* name, float* buffer, int start){
     return buf_size;
 }
 
-void write_to_file(const char* name, float* data, int size){
+void write_to_file(const char* name, double* data, int size){
     FILE* file;
     int nbytes = 0;
 
@@ -97,7 +97,7 @@ void write_to_file(const char* name, float* data, int size){
     
     int i;
     for(i = 0; i < size; i++){
-        fwrite(&data[i], sizeof(float), 1, file);
+        fwrite(&data[i], sizeof(double), 1, file);
     }
 
     fclose(file);
