@@ -7,17 +7,17 @@ int main(){
     int fs = 44100; //Sampling frequency
     float* noisy = calloc(signal_len, sizeof(float));
     float* filter = calloc(filter_len, sizeof(float));
-
+    float* conv;
     read_from_file("noisy.dat", noisy, 0);
     read_from_file("filter.dat", filter, 0);
 
     // Part 1
-    filter(noisy, filter, signal_len, filter_len);
+    conv = filter_signal(noisy, filter, signal_len, filter_len);
     write_to_file("filterResponse.dat", noisy, signal_len);
     free(filter);
     // Part 2
-    modulate(noisy, signal_len, fs, 10000);
-    write_to_file("AM.dat", noisy, signal_len)
+    modulate(conv, signal_len, fs, 10000);
+    write_to_file("AM.dat", conv, filter_len+signal_len-1);
     free(noisy);
 
     return 0;
@@ -26,8 +26,24 @@ int main(){
 
 /******************Part 1: Noise Filtering*******************/
 
-void filter(float* signal, float* filter){
+float* filter_signal(float* signal, float* filter, int signal_size, int filter_size){
     //TODO: Convolve signal with filter
+
+    float * conv = calloc(signal_size + filter_size - 1, sizeof(float));
+
+	
+    for(int i = 0; i < filter_size + signal_size - 1; i++)
+    {
+	for(int j = 0; j < signal_size; j++)
+	{
+            if(i - j >= 0){
+	    	conv[i] = signal[j] * filter[i - j];		
+	    }
+	}
+    }
+ 
+    return conv;
+
 }
 
 
@@ -36,11 +52,11 @@ void filter(float* signal, float* filter){
 //multiply a signal in the time domain by a sign wave of frequency omega
 void modulate(float* signal, int signal_len, float fs, float omega){
     float tau = 6.283185; //2*pi
-    for(int i = 0; i < signal_len, i++){
+    for(int i = 0; i < signal_len; i++){
         //sinf takes in a value in radians
         //2*pi*omega = tau*omega
         //t = i/fs
-        float angle = tau*(float)*omega*i/fs; 
+        float angle = tau*(float)(omega*i/fs); 
         signal[i] = signal[i]*sinf(angle); 
     }
 }

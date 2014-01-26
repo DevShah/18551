@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void filter(float* signal, float* filter);
+float* filter_signal(float* signal, float* filter, int signal_size, int filter_size);
 void modulate(float* signal, int signal_len, float fs, float omega);
 
 int read_from_file(const char* name, float* buffer, int start);
