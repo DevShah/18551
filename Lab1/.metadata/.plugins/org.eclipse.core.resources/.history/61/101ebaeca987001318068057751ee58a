@@ -1,0 +1,63 @@
+package s14_18551.lab1;
+
+import org.opencv.android.Utils;
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.Size;
+import org.opencv.imgproc.Imgproc;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
+
+public class ImageProcessActivity extends Activity {
+
+	private static final String TAG = "ImageProcess";
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_image_process);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.image_process, menu);
+		return true;
+	}
+	
+	public void blur(View view){
+		Log.i(TAG, "in blur\n");
+		//System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		//grab image by id
+		ImageView to_process = (ImageView) findViewById(R.id.image_we_will_process);
+		//get the bitmap, convert to mat, blur
+		Bitmap image_bitmap = ((BitmapDrawable) to_process.getDrawable()).getBitmap();
+		int width = image_bitmap.getWidth();
+		int height = image_bitmap.getHeight();
+		Mat image_mat = new Mat(new Size(width,height), CvType.CV_8U);
+		Utils.bitmapToMat(image_bitmap, image_mat);
+		Imgproc.GaussianBlur(image_mat, image_mat, new Size(5,5), 0);
+		//replace the image
+		Utils.matToBitmap(image_mat, image_bitmap);
+		to_process.setImageBitmap(image_bitmap);
+		Log.i(TAG, "before return\n");
+		return;
+	}
+	
+	public void canny(View view){
+		
+	}
+	
+	public void reset(View view){
+		
+	}
+
+}

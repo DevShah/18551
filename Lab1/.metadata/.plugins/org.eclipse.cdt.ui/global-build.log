@@ -1,0 +1,90 @@
+16:05:08 **** Build of configuration Default for project OpenCV Sample - native-activity ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:05:08 **** Build of configuration Default for project OpenCV Sample - face-detection ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:05:08 **** Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:05:14 **** Auto Build of configuration Default for project OpenCV Sample - face-detection ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:05:15 **** Auto Build of configuration Default for project OpenCV Sample - native-activity ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:05:15 **** Auto Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:13:41 **** Incremental Build of configuration Default for project OpenCV Sample - face-detection ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:13:41 **** Incremental Build of configuration Default for project OpenCV Sample - native-activity ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:13:41 **** Incremental Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:08 **** Incremental Build of configuration Default for project OpenCV Sample - face-detection ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:08 **** Incremental Build of configuration Default for project OpenCV Sample - native-activity ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:08 **** Incremental Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:31 **** Incremental Build of configuration Default for project OpenCV Sample - face-detection ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:31 **** Incremental Build of configuration Default for project OpenCV Sample - native-activity ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]
+16:22:31 **** Incremental Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+/ndk-build.cmd 
+Cannot run program "/ndk-build.cmd": Unknown reason
+
+Error: Program "/ndk-build.cmd" not found in PATH
+PATH=[/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games]

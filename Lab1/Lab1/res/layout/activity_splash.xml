@@ -16,7 +16,7 @@
         tools:ignore="UselessParent" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/image_to_process"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/group_pic_2"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/ajmal_gavi_and_dev"
+            android:text="Ajmal Thanikkal"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -35,7 +35,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/_18551_spring_14_lab_1"
+            android:text="athanikk@andrew"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Dev Shah"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="devs@andrew"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Gavi Adler"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="gya@andrew"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>
