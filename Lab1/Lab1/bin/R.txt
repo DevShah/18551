@@ -8,6 +8,7 @@ int drawable group_pic_clear 0x7f020002
 int drawable ic_launcher 0x7f020003
 int id action_settings 0x7f040010
 int id any 0x7f040000
+int id audio_file_name 0x7f040006
 int id back 0x7f040001
 int id button1 0x7f040004
 int id button2 0x7f040007
@@ -18,7 +19,6 @@ int id image_to_process 0x7f04000b
 int id image_we_will_process 0x7f04000a
 int id linearLayout1 0x7f040003
 int id textView1 0x7f040005
-int id textView2 0x7f040006
 int id textView3 0x7f04000c
 int id textView4 0x7f04000d
 int id textView5 0x7f04000e
