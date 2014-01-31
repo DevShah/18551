@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="s14_18551.lab1.SplashScreen"
+            android:name="s1418551.lab1.SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="s14_18551.lab1.MainActivity"
+            android:name="s1418551.lab1.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,11 +34,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="s14_18551.lab1.ImageProcessActivity"
+            android:name="s1418551.lab1.ImageProcessActivity"
             android:label="@string/title_activity_image_process" >
         </activity>
         <activity
-            android:name="s14_18551.lab1.AudioProcessActivity"
+            android:name="s1418551.lab1.AudioProcessActivity"
             android:label="@string/title_activity_audio_process" >
         </activity>
     </application>

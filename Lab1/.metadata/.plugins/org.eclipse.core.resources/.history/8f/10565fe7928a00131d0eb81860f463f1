@@ -1,0 +1,19 @@
+#ifndef AUDIO__H
+#define AUDIO__H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <jni.h>
+
+double* filter_signal(double* signal, double* filter, int signal_size, int filter_size);
+void modulate(double* signal, int signal_len, double fs, double omega);
+void filter();
+void Java_com_ndkaudio_NdkaudioActivity_moduleSignal(JNIEnv* env, jobject javaThis);
+void Java_com_ndkaudio_NdkaudioActivity_filter(JNIEnv* env, jobject javaThis);
+
+int read_from_file(const char* name, double* buffer, int start);
+void write_to_file(const char* name, double* data, int size);
+
+
+#endif

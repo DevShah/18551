@@ -13,8 +13,8 @@
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="88" key="DIALOG_Y_ORIGIN"/>
-		<item value="489" key="DIALOG_X_ORIGIN"/>
+		<item value="15" key="DIALOG_Y_ORIGIN"/>
+		<item value="372" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
 		<item value="com.android.ide.eclipse.editors.wizards.NewActivityWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
