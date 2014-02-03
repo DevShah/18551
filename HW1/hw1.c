@@ -1,4 +1,5 @@
 #include "hw1.h"
+#include <math.h>
 
 /***********************DRIVER*******************************/
 int main(){
@@ -57,7 +58,8 @@ void modulate(double* signal, int signal_len, double fs, double omega){
         //2*pi*omega = tau*omega
         //t = i/fs
         double angle = tau*(double)(omega*i/fs); 
-        signal[i] = signal[i]*sinf(angle); 
+        //signal[i] = sqrt((signal[i]*sin(angle) + signal[i]*cos(angle))*(signal[i]*sin(angle)+signal[i]*cos(angle))); 
+    	signal[i] = abs(signal[i]*sin(angle) + signal[i]*cos(angle));
     }
 }
 
