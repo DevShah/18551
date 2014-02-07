@@ -60,7 +60,7 @@ void IPCAtrain(char* trainFolderPath, int numTrain)
 		
 		// Store the eigen vectors and the mean vector in a file, which will be accessed by the IPCAtest function
 	
-		Mat A = Mat(128,128, CV_32FC1, 0);
+		Mat A;;
 		int * read = (int*)malloc(30000*sizeof(int));
 		for(int j = 1; j <= numTrain; j++)
 		{
@@ -77,25 +77,35 @@ void IPCAtrain(char* trainFolderPath, int numTrain)
 			strcat(filename, num);
 			strcat(filename, ".jpg");
 		  	printf("%s\n", filename);
-			read_from_file(filename, read, 0);
-			add(Mat(128, 128, CV_32FC1, read), A, A);
+			//read_from_file(filename, read, 0);
+			//Mat E = Mat(128,128);
+			Mat E = imread(filename, 0);
+			//add(A, E, A);
+			A += E;
 		}
-		divide(8, A, A);	
+		Mat mean;
+		mean = A / 8;
 		Mat EigenValues,EigenVectors;
         	eigen(A,1,EigenValues,EigenVectors);
         	//DisplayMat(EigenVectors);
 		Mat Cov;
-		//calcCovarMatrix(A, 128, Cov, A, CV_32FC1);
 		
-		/*	char * name = (char *) malloc(100);
-			sprintf(name, "%d", i);
-			strcat(name, ".jpg");
-			//int * v = (int *) malloc(128 * sizeof(int));
-			std::vector<double> v(first_row.begin<double>(), first_row.end<double>());
-			for(int k = 0; k < 128; k++){
-				write_to_file(name,v, 128*sizeof(int)); 
-			}
-		*/
+		cv::calcCovarMatrix(&mean, 1, Cov, mean, CV_32FC1);
+		
+		char * mean_file = (char *) malloc(100);
+		char * cov_file = (char *) malloc(100);
+		sprintf(cov_file, "cov%d", i);	 
+		sprintf(mean_file, "mean%d", i);
+		strcat(mean_file, ".txt");
+		strcat(cov_file, ".txt");
+		//int * v = (int *) malloc(128 * sizeof(int));
+		//std::vector<double> v(first_row.begin<double>(), first_row.end<double>());
+		for(int k = 0; k < 128; k++){
+			cv::imwrite(mean_file, A);
+			cv::imwrite(cov_file, Cov);
+			 
+		}
+		
 		
 	}
 	return;
