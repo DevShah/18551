@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+/Users/devshah/Documents/Carnegie Mellon/18551/Lab1/.metadata/.plugins/org.eclipse.jdt.core
-1463899306.index
-1658498260.index
-2522007604.index

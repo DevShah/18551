@@ -1,9 +1,0 @@
-11:12:04 **** Auto Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
-/ndk-build.cmd 
-Cannot run program "/ndk-build.cmd": Unknown reason
-
-Error: Program "/ndk-build.cmd" not found in PATH
-PATH=[/usr/bin:/bin:/usr/sbin:/sbin]
-
-11:12:04 Build Finished (took 6ms)
-
